@@ -1,5 +1,6 @@
-import React, { Component} from 'react';
-import { withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps"
+import React, { Component} from 'react'
+import { withGoogleMap, GoogleMap, Marker, InfoWindow } from 'react-google-maps'
+
 
 
 class Map extends Component {
@@ -37,9 +38,7 @@ class Map extends Component {
 
    return(
       <div className = "my-google-map">
-        <header>
-          <h1>Kindergartens in Odense, Denmark</h1>
-        </header>
+           
         <div className = "my-odensedk-map">
           <MyGoogleMap
             googleMapURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA_MykAjK0nyi4YZ8Fvki215doVtyIMer8&v=3.exp&libraries=geometry,drawing,places"
@@ -48,6 +47,7 @@ class Map extends Component {
             mapElement = {<div style={{ height: `100%` }} />}
           />
         </div>
+        
         <footer className = "footer">
           <p>Odense, Denmark neighbourhood map, created with react-google-maps, all locations fetched using Axios from Foursquare API</p>
         </footer>
@@ -57,4 +57,4 @@ class Map extends Component {
    }
 };
 
-export default Map;
+export default Map

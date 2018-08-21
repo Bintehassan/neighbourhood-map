@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {ListGroup, ListGroupItem, FormControl} from 'react-bootstrap'
+import { slide as Menu } from 'react-burger-menu'
 
 class ListView extends Component {
     state = {
@@ -21,31 +23,32 @@ class ListView extends Component {
            
         const listItems = this.filterQuery(this.props.placesOfInterest, this.state.filterInput).map((venue, index) => {
             return (
-                <li
+                <ListGroup
                 key = {venue.id}
                 onClick = {() => {this.props.toggleInfoWindow(index)}}
                 onKeyPress = {() => {this.props.toggleInfoWindow(index)}}
                 >
-                {venue.name}
+                <ListGroupItem>{venue.name}</ListGroupItem>
                 
-                </li>
+                </ListGroup>
             )
         })
 
         return (
+            <Menu noOverlay>
             <div> 
                 <form
                 onSubmit = {this.props.getLocations.bind(null, this.state.filterInput)}
                 > 
-                <input
+                <FormControl
                     type = "text"
                     placeholder = "Filter Results"
                     name = "filterInput"
                     id = "filterInput"
                     onChange = {this.changeHandler}
                 />
-                <button type="submit">Filter</button>
 
+                
                     <div>
                         <ul>
                             {listItems}
@@ -53,6 +56,7 @@ class ListView extends Component {
                     </div>
                 </form>
             </div>
+            </Menu>
             
             
         )

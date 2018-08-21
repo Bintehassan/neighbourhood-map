@@ -3,6 +3,7 @@ import './App.css';
 import Map from './components/Map'
 import axios from 'axios'
 import ListView from './components/ListView'
+import {Row, Col, PageHeader} from 'react-bootstrap'
 
 class App extends Component {
   state = {
@@ -35,8 +36,8 @@ class App extends Component {
       })
      
     })
-      .catch((error) => {alert ("Awh! Snap")
-      console.log("Failed to fetch data from Foursquare");
+      .catch((error) => {alert ("Awh! Snap! Failed to fetch data from Foursquare", error)
+      
     })
 
   } 
@@ -51,22 +52,35 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Map
-          placesOfInterest = {this.state.placesOfInterest}
-          desiredPlace = {this.state.desiredPlace}
-          toggleInfoWindow = {this.toggleInfoWindow}     
-        />
-
-        <ListView
-          placesOfInterest = {this.state.placesOfInterest}
-          toggleInfoWindow = {this.toggleInfoWindow}
-          getLocations = {this.getLocations}
-          updateFilteredPlaces = {this.updateFilteredPlaces}
-        />
+      <div className = "app" role = "main">
+        <PageHeader className = "header" tabIndex="0">
+          Kindergartens in Odense, Denmark
+        </PageHeader>
+        <Row className="app-grid">
+          <Col xs={12} md={8} tabIndex="0">
+            <code>{
+              <Map
+              placesOfInterest = {this.state.placesOfInterest}
+              desiredPlace = {this.state.desiredPlace}
+              toggleInfoWindow = {this.toggleInfoWindow}     
+              />
+          
+              }</code>
+            </Col>
+          <Col xs={6} md={4} tabIndex="0">
+            <code>{
+              <ListView
+              placesOfInterest = {this.state.placesOfInterest}
+              toggleInfoWindow = {this.toggleInfoWindow}
+              getLocations = {this.getLocations}
+              updateFilteredPlaces = {this.updateFilteredPlaces}
+              />
+            }</code>
+          </Col>
+        </Row>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
