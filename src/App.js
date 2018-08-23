@@ -10,6 +10,7 @@ class App extends Component {
     placesOfInterest: [],
     desiredPlace: {},
     filteredPlaces: []
+
     
   }
  
@@ -36,18 +37,18 @@ class App extends Component {
       })
      
     })
-      .catch((error) => {alert ("Awh! Snap! Failed to fetch data from Foursquare", error)
+      .catch((error) => {alert (`Awh! Snap! Failed to fetch data from Foursquare. Error: ${error}`)
       
     })
 
   } 
 
-  updateFilteredPlaces = (filteredPlaces) => {
-    this.setState({placesOfInterest: filteredPlaces})
-  }
-
   toggleInfoWindow = (desiredPlace) => {
     this.setState({desiredPlace: desiredPlace})
+  }
+
+  updateFilteredPlaces = (filteredPlaces) => {
+    this.setState({filteredPlaces: filteredPlaces})
   }
 
   render() {
@@ -57,26 +58,29 @@ class App extends Component {
           Kindergartens in Odense, Denmark
         </PageHeader>
         <Row className="app-grid">
-          <Col xs={12} md={8} tabIndex="0">
-            <code>{
-              <Map
-              placesOfInterest = {this.state.placesOfInterest}
-              desiredPlace = {this.state.desiredPlace}
-              toggleInfoWindow = {this.toggleInfoWindow}     
-              />
-          
-              }</code>
-            </Col>
           <Col xs={6} md={4} tabIndex="0">
             <code>{
               <ListView
               placesOfInterest = {this.state.placesOfInterest}
               toggleInfoWindow = {this.toggleInfoWindow}
-              getLocations = {this.getLocations}
+              // getLocations = {this.getLocations}
+              // filteredPlaces = {this.state.filteredPlaces}
               updateFilteredPlaces = {this.updateFilteredPlaces}
               />
             }</code>
           </Col>
+          
+          <Col xs={12} md={8} tabIndex="0">
+            <code>{
+              <Map
+              placesOfInterest = {this.state.filteredPlaces}
+              desiredPlace = {this.state.desiredPlace}
+              toggleInfoWindow = {this.toggleInfoWindow}     
+              />
+          
+              }</code>
+          </Col>
+         
         </Row>
       </div>
     )
