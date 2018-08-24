@@ -44,7 +44,7 @@ The hierarchy of the application is:
 
 ### Credits
 
-https://www.youtube.com/watch?v=MEzcDiA6shM&t=548s
-https://www.youtube.com/watch?v=RM_nXOyHwN0
-Eman
-Udacity
+- https://www.youtube.com/watch?v=MEzcDiA6shM&t=548s
+- https://www.youtube.com/watch?v=RM_nXOyHwN0
+- Eman
+- Udacity
