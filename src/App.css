@@ -1,26 +1,35 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 30px;
-  padding: 20px;
-  color: white;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 40px;
 }
 
 .App-title {
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+.header, .footer, .info-window{
+  color: #c7254e;
 }
+
+.google-map {
+  text-align: center;
+  background: #E8E8E8;
+  margin-top: -1.4rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.my-odensedk-map {
+  width: 100%;
+  float: right;
+}
+
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: absolute;
@@ -50,40 +59,50 @@
 .bm-menu {
   background: #e0a0a0;
   padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
+  font-size: 1.10em;
 }
 
 /* Wrapper for item list */
 .bm-item-list {
   color: #c7254e;
-  padding: 0.8em;
+  /* padding: 0.8em; */
 }
 
 /* Individual item */
 .bm-item {
   display: inline-block;
+  text-align: left;
+  align-self: auto;
 }
 
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+.filter {
+  padding: 10px;
 }
 
-.filter FormControl {
+.filter input {
   margin: 0 auto;
   display: block;
   padding-bottom: 10px;
 }
-.header{
-  color: #c7254e;
+
+ul {
+  list-style: none;
 }
-.google-map {
-  text-align: center;
-  background: #E8E8E8;
-  margin-top: -1.4rem;
+
+li {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Media Query */
+@media screen and (max-width: 650px)  {
+  h1 {
+    font-size: 20pt;
+    text-align: center;
+    padding-left: 75px;
+  }
+  
+  .footer {
+    font-size: 8pt;
+  }
 }
