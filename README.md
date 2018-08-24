@@ -2,7 +2,7 @@
 
 This is the final project for the Front End Nanodegree program by Udacity
 
-## Information for users
+### What does this app do
 
 - This is a neighbourhood map of Odense Denmark and it displays kindergartens (bornehaver) around the area I live
 - The map displays markers, with the exact locations of the kindergartens. When you click on these markers, a small window pops up with further information about the location
@@ -41,3 +41,10 @@ The hierarchy of the application is:
 - Locations are fetched inside <App />
 - The Map, Markers and infoWindow are in <Map />
 - The list of locations displayed is in <ListView />
+
+### Credits
+
+https://www.youtube.com/watch?v=MEzcDiA6shM&t=548s
+https://www.youtube.com/watch?v=RM_nXOyHwN0
+Eman
+Udacity
