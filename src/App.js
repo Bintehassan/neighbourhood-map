@@ -11,8 +11,6 @@ class App extends Component {
     placesOfInterest: [],
     desiredPlace: {},
     filteredPlaces: []
-
-    
   }
  
   componentDidMount() {
@@ -64,10 +62,10 @@ class App extends Component {
               placesOfInterest = {this.state.filteredPlaces}
               desiredPlace = {this.state.desiredPlace}
               toggleInfoWindow = {this.toggleInfoWindow} 
-            
               />
               }</code>
           </Col>
+          
           <Col xs={6} md={3}>
             <code>{ 
             <ListView
@@ -79,15 +77,7 @@ class App extends Component {
           </Col>
         </Row>
       </Grid>
-      // <div className = "app" role = "main">
      
-        
-             
-            
-              
-          
-             
-      // </div>
     )
   }
 }

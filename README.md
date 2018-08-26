@@ -17,6 +17,14 @@ This is the final project for the Front End Nanodegree program by Udacity
 - Then run `npm start`
 - The application will open in your browser at the address: localhost:3000
 
+### Service Worker
+The service worker only runs in production mode. To start production mode after installing the project dependencies:
+
+- Run npm run build
+- Serve the serve with npm install -g serve
+- Start production mode with serve -s build
+- The project will run on http://localhost:5000
+
 ### Dependencies
 
 - React Bootstrap: [https://react-bootstrap.github.io/getting-started/introduction/]

@@ -41,6 +41,7 @@ class Map extends Component {
           <PageHeader className = "header">
             Kindergartens in Odense, Denmark
           </PageHeader>
+          
           <MyGoogleMap
             googleMapURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA_MykAjK0nyi4YZ8Fvki215doVtyIMer8&v=3.exp&libraries=geometry,drawing,places"
             loadingElement = {<div style={{ height: `100%` }} />}

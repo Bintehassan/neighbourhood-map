@@ -5,6 +5,7 @@
   display: block;
   position: relative;
   padding-bottom: 40px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .App-title {
@@ -15,12 +16,6 @@
   color: #c7254e;
 }
 
-.google-map {
-  text-align: center;
-  background: #E8E8E8;
-  margin-top: -1.4rem;
-}
-
 h1 {
   text-align: center;
 }
@@ -28,51 +23,6 @@ h1 {
 .my-odensedk-map {
   width: 100%;
   float: right;
-}
-
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: absolute;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #000000;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  background: #e0a0a0;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.10em;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #c7254e;
-  /* padding: 0.8em; */
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-  text-align: left;
-  align-self: auto;
 }
 
 .filter {
@@ -92,17 +42,6 @@ ul {
 li {
   margin-bottom: 20px;
   text-align: justify;
+  font-size: 13px;
 }
 
-/* Media Query */
-@media screen and (max-width: 650px)  {
-  h1 {
-    font-size: 20pt;
-    text-align: center;
-    padding-left: 75px;
-  }
-  
-  .footer {
-    font-size: 8pt;
-  }
-}
