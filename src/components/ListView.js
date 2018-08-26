@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {ListGroup} from 'react-bootstrap'
-import { slide as Menu } from 'react-burger-menu'
+import {ListGroup, ListGroupItem, FormControl} from 'react-bootstrap'
+// import { slide as Menu } from 'react-burger-menu'
 
 
 class ListView extends Component {
@@ -19,10 +19,12 @@ class ListView extends Component {
     render () {
            
         return (
-            <Menu noOverlay tabIndex = "0" aria-label="opens list of kindergartens in Odense Denmark">
+            // <div className = "nav" tabIndex = "0">
+
+            // <Menu noOverlay>
                 <div className = "filter" aria-label="kindergartens in Odense, Denmark" tabIndex={0}> 
                    
-                    <input 
+                    <FormControl 
                         type = "text"
                         placeholder = "Filter Results"
                         value = {this.state.filterInput}
@@ -34,7 +36,7 @@ class ListView extends Component {
 
                     
                     <div className = "list-of-kgs">
-                        <ul aria-label = "kindergartens in Odense, Denmark" role = "menu">
+                        <ul aria-label = "kindergartens in Odense, Denmark" role = "navigation">
                         { this.filterQuery(this.props.placesOfInterest, this.state.filterInput).map((venue, index) => {
                         return (
                             
@@ -45,21 +47,22 @@ class ListView extends Component {
                             key = {venue.id}
                             onClick = {() => {this.props.toggleInfoWindow(index)}}
                             onKeyPress = {() => {this.props.toggleInfoWindow(index)}}
-                            animation = {this.props.desiredPlace === index ? window.google.maps.Animation.BOUNCE: null}
+                            // animation = {this.props.desiredPlace === index ? window.google.maps.Animation.BOUNCE: null}
                             >
                             
-                            {venue.name}
+                            <ListGroupItem>{venue.name}</ListGroupItem>
                             
                             </ListGroup>
                             
                         )
-                        }) }
+                    }) }
 
                         </ul>
                     </div>
                   
                 </div>
-            </Menu>
+            // {/* </Menu> */}
+            // {/* // </div> */}
               
         )
     }

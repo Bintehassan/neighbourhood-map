@@ -3,7 +3,8 @@ import './App.css';
 import Map from './components/Map'
 import axios from 'axios'
 import ListView from './components/ListView'
-import {PageHeader} from 'react-bootstrap'
+import {Grid, Col, Row} from 'react-bootstrap'
+
 
 class App extends Component {
   state = {
@@ -55,25 +56,38 @@ class App extends Component {
 
   render() {
     return (
-      <div className = "app" role = "main">
-        <PageHeader className = "header" tabIndex="0">
-          Kindergartens in Odense, Denmark
-        </PageHeader>
-        
-              <ListView
+      <Grid className = "app" role = "main">
+        <Row className="show-grid">
+          <Col xs={12} md={9} tabIndex = "0">
+            <code>{
+              <Map
+              placesOfInterest = {this.state.filteredPlaces}
+              desiredPlace = {this.state.desiredPlace}
+              toggleInfoWindow = {this.toggleInfoWindow} 
+            
+              />
+              }</code>
+          </Col>
+          <Col xs={6} md={3}>
+            <code>{ 
+            <ListView
               placesOfInterest = {this.state.placesOfInterest}
               toggleInfoWindow = {this.toggleInfoWindow}
               updateFilteredPlaces = {this.updateFilteredPlaces}
               />
+              }</code>
+          </Col>
+        </Row>
+      </Grid>
+      // <div className = "app" role = "main">
+     
+        
+             
             
-              <Map
-              placesOfInterest = {this.state.filteredPlaces}
-              desiredPlace = {this.state.desiredPlace}
-              toggleInfoWindow = {this.toggleInfoWindow}     
-              />
+              
           
              
-      </div>
+      // </div>
     )
   }
 }
