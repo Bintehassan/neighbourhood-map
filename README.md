@@ -46,9 +46,9 @@ The hierarchy of the application is:
 --- <ListView />
 ```
 
-- Locations are fetched inside <App />
-- The Map, Markers and infoWindow are in <Map />
-- The list of locations displayed is in <ListView />
+- Locations are fetched inside <App/>
+- The Map, Markers and infoWindow are in <Map/>
+- The list of locations displayed is in <ListView/>
 
 ### Credits
 
